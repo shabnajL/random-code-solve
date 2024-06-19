@@ -7,7 +7,9 @@ ON Employees.id = EmployeeUNI.id;
 
 -------------------------------------------------
 
--- 
+-- 1068. Product Sales Analysis I
 -- Write your MySQL query statement below
+SELECT Product.product_name, Sales.year, Sales.price FROM Product RIGHT JOIN Sales
+ON Sales.product_id = Product.product_id;
 
 -------------------------------------------------
