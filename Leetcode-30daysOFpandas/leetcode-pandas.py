@@ -12,4 +12,17 @@ def find_products(products: pd.DataFrame) -> pd.DataFrame:
     found = products[(products['low_fats'] == 'Y') & (products['recyclable'] == 'Y')]
     return found[['product_id']]
 
-### 
+###  183. Customers Who Never Order
+import pandas as pd
+
+def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
+    a = customers['id']
+    b = orders['customerId']
+    #df = customers[a.isin(b)]
+    df = customers[~a.isin(b)]
+    df = df[['name']]
+    df = df.rename(columns={'name': "Customers"})
+    return df
+
+
+###  
