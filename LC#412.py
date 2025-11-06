@@ -2,6 +2,7 @@
 
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
+        """ 
         answer = []
         i = 1
         while(i<=n):
@@ -14,7 +15,28 @@ class Solution:
             else:
                 answer.append(str(i))
             i = i + 1
+        """
+
+        answer = []
+        
+        i = 1
+        while(i<=n):
+            checkAnswer = ""
+            
+            if i%3 == 0:
+                checkAnswer += "Fizz"
+            if i%5 == 0:
+                checkAnswer += "Buzz"
+            if not checkAnswer:
+                checkAnswer += str(i) 
+            
+            answer.append(checkAnswer)
+            i = i + 1
+        
         return answer
+            
+
+        
             
 
         
