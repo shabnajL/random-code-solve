@@ -26,3 +26,26 @@ class Solution:
         if (og_dvs>0 and og_dvd<0) or (og_dvs<0 and og_dvd>0):
             result = -result
         return result
+
+
+'''
+Testcases:
+
+10
+3
+7
+-3
+11
+9
+-2147483648
+-1
+-1
+1
+1
+-1
+-1
+-1
+1
+1
+
+'''
